@@ -1,0 +1,144 @@
+/*********************************** Basic styles *******************************************/
+
+::-moz-selection {
+  color: white;
+  background: #00ff00;
+}
+::selection {
+  color: white;
+  background: #00ff00;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 75%;
+  height: 100%;
+  box-sizing: border-box;
+}
+body {
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #00ff00;
+  background-color: #222;
+  transition: background-color 150ms ease-out, color 150ms ease-out;
+}
+
+
+/*********************************** Header part styles ****************************************/
+
+.hiddenPhoto {
+  display: none;
+}
+
+.rightBar {
+  float: right;
+  margin: 2em 2em 0 0;
+  height: 2rem;
+  width: 2.2rem;
+}
+select {
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.emailMe {
+  font-size: 3em;
+  float: right;
+  margin: .38em .2em 0 0;
+}
+
+
+/*********************************** Main part styles ****************************************/
+
+.scene {
+  padding: 12rem 2rem 1rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.actor {
+  font-size: 2.8rem;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.actor:last-of-type {
+  margin-bottom: 6rem;
+}
+
+.actor__content {
+  flex-grow: 1;
+}
+@-webkit-keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.actor__content--typing::after {
+  content: '|';
+  -webkit-animation: blink 500ms infinite;
+          animation: blink 500ms infinite;
+}
+
+#about,
+#contact {
+  font-size: 50%;
+  word-spacing: 2px;
+  line-height: 1.8;
+}
+
+.fb {
+  color: cornflowerblue;
+}
+.gh {
+  color: antiquewhite;
+}
+.yt {
+  color: red;
+}
+
+
+
+/******************************** General elements styles **************************************/
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  opacity: .6;
+  margin: 0 0 .6rem 0;
+  transition: opacity 300ms ease-out;
+}
+p:hover {
+  opacity: 1;
+}
